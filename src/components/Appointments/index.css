@@ -6,8 +6,8 @@
 
 .bg-container {
   background-image: linear-gradient(#9796f0, #fbc7d4);
-  height: 100vh;
   display: flex;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   padding: 30px;
@@ -19,7 +19,6 @@
   border-radius: 20px;
   padding: 40px;
   padding-bottom: none;
-  max-height: 92%;
   width: 80%;
 }
 .profile-details {
@@ -128,7 +127,12 @@
 
 @media screen and (max-width: 768px) {
   .bg-container {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    padding: 25px;
+  }
+  .heading {
+    font-size: 30px;
   }
   .image {
     width: 150px;
@@ -146,8 +150,8 @@
     width: 100%;
   }
   .card-container {
-    width: 90%;
-    padding: 20px;
+    width: 100%;
+    padding: 15px;
     height: 100%;
   }
   .heading {
@@ -169,7 +173,7 @@
   .all-appoints {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
   }
   .all-appointments {
     width: 100%;

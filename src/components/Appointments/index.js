@@ -83,7 +83,7 @@ class Appointments extends Component {
                 value={date}
                 id="date"
               />
-              <button type="submit" className="button" testid="star">
+              <button type="submit" className="button">
                 Add
               </button>
             </form>
@@ -106,15 +106,17 @@ class Appointments extends Component {
                 Starred
               </button>
             </div>
-            <ul className="all-appoints">
-              {finalList.map(eachAppointment => (
-                <AppointmentItem
-                  appointmentDetails={eachAppointment}
-                  key={eachAppointment.id}
-                  staredAppoint={this.staredAppoint}
-                />
-              ))}
-            </ul>
+            <div>
+              <ul className="all-appoints">
+                {finalList.map(eachAppointment => (
+                  <AppointmentItem
+                    appointmentDetails={eachAppointment}
+                    key={eachAppointment.id}
+                    staredAppoint={this.staredAppoint}
+                  />
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

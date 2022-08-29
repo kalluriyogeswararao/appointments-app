@@ -18,7 +18,12 @@ const AppointmentItem = props => {
         <p className="title-head">{title}</p>
         <p className="appoin-date">{date}</p>
       </div>
-      <button type="button" className="star-btn" onClick={onisStared}>
+      <button
+        type="button"
+        className="star-btn"
+        onClick={onisStared}
+        testid="star"
+      >
         <img src={activeStar} className="star" alt="star" />
       </button>
     </li>
