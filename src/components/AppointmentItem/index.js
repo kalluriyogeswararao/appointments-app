@@ -1,8 +1,12 @@
 import './index.css'
 
 const AppointmentItem = props => {
-  const {appointmentDetails} = props
-  const {title, date, isStared} = appointmentDetails
+  const {appointmentDetails, staredAppoint} = props
+  const {title, date, isStared, id} = appointmentDetails
+
+  const onisStared = () => {
+    staredAppoint(id)
+  }
 
   const activeStar = isStared
     ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
@@ -14,7 +18,7 @@ const AppointmentItem = props => {
         <h1 className="title-head">{title}</h1>
         <p className="appoin-date">{date}</p>
       </div>
-      <button type="button" className="star-btn">
+      <button type="button" className="star-btn" onClick={onisStared}>
         <img src={activeStar} className="star" alt="star" />
       </button>
     </li>
