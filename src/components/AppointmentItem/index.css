@@ -1,11 +1,13 @@
 .appointment {
   padding: 10px;
   background-color: #ffffff;
-  border: 1px solid #b5b7c4;
+  border: 1px solid #9897f0;
   border-radius: 15px;
   display: flex;
   align-items: flex-start;
   margin-right: 20px;
+  width: 250px;
+  justify-content: space-between;
 }
 
 .details {
@@ -16,14 +18,14 @@
 .title-head {
   font-size: 20px;
   font-family: 'roboto';
-  color: #b5b7c4;
+  color: #9796f0;
   margin-bottom: 10px;
 }
 
 .appoin-date {
   font-size: 15px;
   font-family: 'roboto';
-  color: #b5b7c4;
+  color: #9796f0;
 }
 
 .start {

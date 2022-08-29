@@ -46,16 +46,15 @@ class Appointments extends Component {
   }
 
   onStaredAppoints = () => {
-    const {appointmentList} = this.state
-    const getFilterStarAppoints = appointmentList.filter(
-      each => each.isStared === true,
-    )
-    this.setState({appointmentList: getFilterStarAppoints})
     this.setState(prevState => ({isStar: !prevState.isStar}))
   }
 
   render() {
     const {appointmentList, isStar, title, date} = this.state
+    const filteredProjects = appointmentList.filter(
+      each => each.isStared === true,
+    )
+    const finalList = isStar ? filteredProjects : appointmentList
     const activeBtn = isStar ? 'stared-btn' : 'normal-btn'
     return (
       <div className="bg-container">
@@ -108,7 +107,7 @@ class Appointments extends Component {
               </button>
             </div>
             <ul className="all-appoints">
-              {appointmentList.map(eachAppointment => (
+              {finalList.map(eachAppointment => (
                 <AppointmentItem
                   appointmentDetails={eachAppointment}
                   key={eachAppointment.id}

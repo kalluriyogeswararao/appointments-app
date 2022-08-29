@@ -15,7 +15,7 @@ const AppointmentItem = props => {
   return (
     <li className="appointment">
       <div className="details">
-        <h1 className="title-head">{title}</h1>
+        <p className="title-head">{title}</p>
         <p className="appoin-date">{date}</p>
       </div>
       <button type="button" className="star-btn" onClick={onisStared}>
