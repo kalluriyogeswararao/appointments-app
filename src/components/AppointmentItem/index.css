@@ -1,1 +1,53 @@
-/* Write your CSS here */
+.appointment {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #b5b7c4;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-head {
+  font-size: 20px;
+  font-family: 'roboto';
+  color: #b5b7c4;
+  margin-bottom: 10px;
+}
+
+.appoin-date {
+  font-size: 15px;
+  font-family: 'roboto';
+  color: #b5b7c4;
+}
+
+.start {
+  width: 20px;
+}
+
+.star-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .appointment {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  .star {
+    width: 25px;
+  }
+  .title-head {
+    margin-bottom: 15px;
+  }
+}

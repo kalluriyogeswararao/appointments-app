@@ -18,6 +18,8 @@
   background-color: #ffffff;
   border-radius: 20px;
   padding: 40px;
+  padding-bottom: none;
+  max-height: 92%;
   width: 80%;
 }
 .profile-details {
@@ -60,20 +62,28 @@
 }
 
 .stared-btn {
-  height: 40px;
-  width: 100px;
+  height: 30px;
+  width: 80px;
   background-color: #8b5cf6;
   color: #ffffff;
   border-radius: 30px;
+  font-size: 15px;
+  font-family: 'bree serif';
+  outline: none;
+  cursor: pointer;
 }
 
 .normal-btn {
-  height: 40px;
-  width: 100px;
+  height: 30px;
+  width: 80px;
   background-color: #ffffff;
   color: #8b5cf6;
   border-radius: 30px;
   border: 1px solid #8b5cf6;
+  font-size: 15px;
+  font-family: 'bree serif';
+  outline: none;
+  cursor: pointer;
 }
 
 .side-heading {
@@ -101,11 +111,24 @@
 
 .all-appointments {
   padding: 30px;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all-appoints {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  overflow: auto;
 }
 
 @media screen and (max-width: 768px) {
   .bg-container {
-    min-height: 100vh;
+    height: 100vh;
   }
   .image {
     width: 150px;
@@ -125,6 +148,7 @@
   .card-container {
     width: 90%;
     padding: 20px;
+    height: 100%;
   }
   .heading {
     text-align: center;
@@ -141,5 +165,13 @@
   .button {
     width: 100%;
     height: 40px;
+  }
+  .all-appoints {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .all-appointments {
+    width: 100%;
   }
 }
